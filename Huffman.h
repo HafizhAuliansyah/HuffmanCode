@@ -8,16 +8,14 @@
 #include <string>
 
 
-typedef struct{
-	char huruf;
-	int freq;
-}infoH;
 
 #include "BinaryTree.h"
 #include "Queue.h"
 
+// SALMAN
 int CountFrequency(char huruf, char* teks);
 void SortQueueByFreq(Queue *queue);
+// HAFIZH
 void GenerateHuffmanTree(bTree *tree, Queue *queue);
 char* GenerateHuffmanCode(bTree *tree, char huruf);
 void PrintCode(bTree hTree, char* teks);

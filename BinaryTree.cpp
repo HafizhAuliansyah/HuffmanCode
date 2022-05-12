@@ -41,7 +41,7 @@ nAddress bSearch(nAddress root, infotype src){
     if(root == NULL){
     	return NULL;
 	}else{
-		if(root->info == src){
+		if(root->info.huruf == src.huruf && root->info.freq == src.freq){
 			return root;
 		}else{
 			searchNode = bSearch(root->left, src);

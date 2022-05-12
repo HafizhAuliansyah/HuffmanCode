@@ -13,7 +13,11 @@ Created		: 14-1-2022
 */
 
 // Struktur Data Tree
-typedef int infotype;
+typedef struct infoHuffman{
+	char huruf;
+	int freq;
+} infoH ;
+typedef infoH infotype;
 typedef struct TreeNode *nAddress;
 
 typedef struct TreeNode{
@@ -25,6 +29,9 @@ typedef struct TreeNode{
 struct bTree{
 	nAddress root;
 };
+
+#include "Queue.h"
+#include "Huffman.h"
 
 /* Constructor */
 /* Inisialisasi root tree menjadi NULL */

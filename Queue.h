@@ -20,7 +20,7 @@
 /* Tanggal		: 17-03-2022, diedit 19-03-2022 */
 /* Inspired By	: SpNRSLL.h oleh Ade Chandra Nugraha */
 
-typedef nAddress infoQ;
+typedef int infoQ;
 typedef struct tElmtQueue *address_q;
 typedef struct tElmtQueue {
 	 infoQ info;

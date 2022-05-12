@@ -19,7 +19,12 @@ int main() {
 				do{
 					printf("Masukkan Kata/Kalimat : ");
 					getline(cin>>ws, teks);
+					if(teks.length() < 2){
+						printf("TEKS TIDAK BOLEH KURANG DARI 2 KARAKTER\n\n");
+					}
 				}while(teks.length() < 2);
+				char* teks_c = teks.c_str();
+				
 				break;
 			case 2:
 				break;
