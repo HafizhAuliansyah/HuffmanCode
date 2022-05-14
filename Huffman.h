@@ -7,10 +7,8 @@
 #include <conio.h>
 #include <string>
 
-
-
-#include "BinaryTree.h"
 #include "Queue.h"
+#include "BinaryTree.h"
 
 // SALMAN
 int CountFrequency(char huruf, char* teks);

@@ -156,7 +156,14 @@ void bPrint(nAddress node, char tab[]){
 	strcpy(tempTab, tab);
 	strcat(tempTab, "-");
 	if (node!=NULL){
-		printf("%s%d\n",tab,node->info);
+		if(node->info.huruf == '\0'){
+			printf("%s(%d)\n",tab,node->info.freq);
+		}else{
+			if(node->info.huruf == ' ')
+				printf("%s( %s/%d )",tab, "space", node->info.huruf);
+			else
+				printf("%s( %c/%d )",tab, node->info.huruf, node->info.huruf);
+		}
 		bPrint(node->left,tempTab);
 		bPrint(node->right,tempTab);
 	}

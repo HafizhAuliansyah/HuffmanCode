@@ -56,7 +56,7 @@ void DeleteQueue(Queue *Q, infoQ *x){
 	First(*Q) = Next(First(*Q));
 	(*x) = Info(P);
 	Next(P) = Nil;
-	DeAlokasi(P);
+	// DeAlokasi(P);
 }
 
 void UpdateHead(Queue Q, address_q *head){

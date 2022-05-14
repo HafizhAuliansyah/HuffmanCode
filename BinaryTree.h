@@ -30,8 +30,6 @@ struct bTree{
 	nAddress root;
 };
 
-#include "Queue.h"
-#include "Huffman.h"
 
 /* Constructor */
 /* Inisialisasi root tree menjadi NULL */

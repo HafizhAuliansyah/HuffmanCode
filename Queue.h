@@ -20,7 +20,7 @@
 /* Tanggal		: 17-03-2022, diedit 19-03-2022 */
 /* Inspired By	: SpNRSLL.h oleh Ade Chandra Nugraha */
 
-typedef int infoQ;
+typedef nAddress infoQ;
 typedef struct tElmtQueue *address_q;
 typedef struct tElmtQueue {
 	 infoQ info;
@@ -54,6 +54,8 @@ void UpdateHead(Queue Q, address_q *head);
 void UpdateTail(Queue Q, address_q *tail);
 
 void UpdateQueueTracker(Queue Q, QueueTracker *qt);
+
+int LengthQueue(Queue Q);
 
 void PrintQueue(Queue Q);
 
