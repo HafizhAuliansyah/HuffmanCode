@@ -5,6 +5,9 @@ int CountFrequency(char huruf, char* teks){
 	// TODO
 	return jumlah;
 }
+void GenerateCharQueue(Queue *queue){
+	return;
+}
 void SortFreqQueue(Queue *queue){
 	return;
 }

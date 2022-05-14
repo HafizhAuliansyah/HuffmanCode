@@ -12,6 +12,7 @@
 
 // SALMAN
 int CountFrequency(char huruf, char* teks);
+void GenerateCharQueue(Queue *queue);
 void SortQueueByFreq(Queue *queue);
 // HAFIZH
 void GenerateHuffmanTree(bTree *tree, Queue *queue);
