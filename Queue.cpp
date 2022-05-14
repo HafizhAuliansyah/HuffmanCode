@@ -78,6 +78,20 @@ void UpdateQueueTracker(Queue Q, QueueTracker *qt){
 	UpdateHead(Q, &qt->head);
 	UpdateTail(Q, &qt->tail);
 }
+int LengthQueue(Queue Q){
+	int len;
+	address_q temp = Q.First;
+	
+	if(temp == NULL)
+		return 0
+	
+	len = 1;
+	while(temp->next != NULL){
+		temp = temp->next;
+		len++;
+	}
+	return len;
+}
 
 void PrintQueue(Queue Q){
 	address_q P;
