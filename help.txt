@@ -1,3 +1,28 @@
-- Aplikasi dibuat sama siapa, kapan
-- Penjelasan huffman code
-- Langkah langkah penggunaan aplikasi
+
+        _____________________________________________________________________________________________________________
+	|                                                                                                           |
+	|				            - PANDUAN PENGGUNAAN -                                          |
+	|___________________________________________________________________________________________________________|
+	|                                                                                                           |
+	| APA ITU HUFFMAN CODE?                                                                                     |
+	| Huffman code adalah sebuah teknik yang dilakukan untuk pengompresian data yang melibatkan kode-kode biner |                                           
+	| data yang menggunakan kode ASCII jika dikonversikan menggunakan huffman akan mengalami pengompresian se-  |
+        | hingga data tersebut menjadi efisien.                                                                     |
+	|                                                                                                           |
+        | LANGKAH-LANGKAH PENGGUNAAN APLIKASI                                                                       |
+	| 1. Masuk ke dalam menu utama                                                                              |
+	| 2. Input kata atau kalimat                                                                                |
+	|    jangan kurang dari 2 huruf                                                                             |
+	| 3. Setelah input, lihat tree nya agar terbayang dalam proses encodingnya                                  |
+	|    selain itu, dengan menggunakan melihat tree bisa melihat juga tracing persebaran huruf                 |
+	| 4. Lalu kembali ke menu dan pilih menu "Tampilkan Huffman Code" untuk meilihat hasil kompresi per huruf   |
+        |                                                                                                           |
+        |___________________________________________________________________________________________________________|
+	|                                                                                                           |
+        |                                         - HUFFMAN CODE APPLICATION -                                      |
+        |                                                                                                           |
+        |                            Developed by Muhammad Hafizh Auliansyah & Salman Alfarisi                      |
+	|                                                                                                           |
+	|						   Est. 2022                                                |
+	|___________________________________________________________________________________________________________|
+	
