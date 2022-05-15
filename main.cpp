@@ -36,6 +36,6 @@ int main() {
 			
 		}
 		getche();
-	}while(pilih != 9);
+	}while(pilih != 4);
 	return 0;
 }

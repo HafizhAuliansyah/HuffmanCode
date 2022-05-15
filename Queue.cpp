@@ -83,7 +83,7 @@ int LengthQueue(Queue Q){
 	address_q temp = Q.First;
 	
 	if(temp == NULL)
-		return 0
+		return 0;
 	
 	len = 1;
 	while(temp->next != NULL){

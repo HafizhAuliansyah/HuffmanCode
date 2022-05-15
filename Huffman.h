@@ -12,11 +12,13 @@
 
 // SALMAN
 int CountFrequency(char huruf, char* teks);
-void GenerateCharQueue(Queue *queue);
+void GenerateCharQueue(Queue *queue, char *teks);
 void SortQueueByFreq(Queue *queue);
 // HAFIZH
 void GenerateHuffmanTree(bTree *tree, Queue *queue);
 char* GenerateHuffmanCode(bTree *tree, char huruf);
-void PrintCode(bTree hTree, char* teks);
+
+// HAFIZH & SALMAN
+void PrintCode(bTree hTree);
 
 #endif
