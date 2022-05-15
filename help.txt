@@ -1,0 +1,3 @@
+- Aplikasi dibuat sama siapa, kapan
+- Penjelasan huffman code
+- Langkah langkah penggunaan aplikasi

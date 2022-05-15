@@ -101,7 +101,7 @@ void PrintQueue(Queue Q){
 	    printf("Queue Kosong\n");
 	}else{
 	    while(Next(P) != Nil){
-	      printf("%c ", Info(P));
+	      printf("(%c/%d) ", P->info->info.huruf, P->info->info.freq);
 	      P = Next(P);
 	    }
 	    printf("%c ", Info(P));
