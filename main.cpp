@@ -6,24 +6,18 @@ using namespace std;
 int main() {
 	int pilih;
 	string teks;
-	Queue queue;
-	bTree tree;
-
 	do{
 		system("cls");
 		printf("1. Input Kata/Kalimat\n");
 		printf("2. Tampilkan Tree\n");
 		printf("3. Tampilkan Huffman Code\n");
-		printf("4. Help");
+		printf("4. Panduan Penggunaan");
 		printf("5. Keluar \n");
 		printf("Masukkan Pilihan : ");
 		fflush(stdin);
 		scanf("%d" ,&pilih);
 		switch(pilih){
-			case 1:
-			{
-				CreateQueue(&queue);
-				bCreate(&tree);		
+			case 1:{
 				do{
 					printf("Masukkan Kata/Kalimat : ");
 					getline(cin>>ws, teks);
@@ -32,7 +26,6 @@ int main() {
 					}
 				}while(teks.length() < 2);
 				const char* teks_c = teks.c_str();
-				GenerateCharQueue(&queue, teks_c);
 				
 				break;
 			}
@@ -41,13 +34,15 @@ int main() {
 			case 3:
 				break;
 			case 4:
-				//TODO openHelp();
+				openHelp();
+				break;
+			case 5:
 				break;
 			default:
 				break;
 			
 		}
 		getche();
-	}while(pilih != 5);
+	}while(pilih != 4);
 	return 0;
 }

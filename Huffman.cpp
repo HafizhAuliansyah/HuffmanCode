@@ -18,34 +18,36 @@ int CountFrequency(char huruf,const char* teks){
 	return jumlah;
 	
 }
-void GenerateCharQueue(Queue *queue,const char *teks){
+void GenerateCharQueue(Queue *queue, char *teks){
 	char currentChar;
 	int index;
 	bool exist;
 	address_q temp;
 	
 	while(index < strlen(teks)){
-		exist = false;
 		currentChar=teks[index];
 		temp=queue->First;
-		while(temp != NULL){
+		while(temp!=NULL){
 			if(temp->info->info.huruf == currentChar){
 				exist=true;
 				break;
 			}
-			temp=temp->next;
+		temp=temp->next;
 		}
-		if(exist == false){
+		if(exist==true){
+			continue;
+		}
+		else {
 			nAddress newNode;
 			infotype newData;
 			int freq;
-			freq = CountFrequency(currentChar, teks);
+		
+			freq=CountFrequency(currentChar, teks);
 			newData.huruf=currentChar;
-			newData.freq = freq;
+			newData.freq=freq;
 			newNode=bCreateNode(newData);
 			Enqueue(queue, newNode);
 		}
-		index++;
 	}
 	
 }
