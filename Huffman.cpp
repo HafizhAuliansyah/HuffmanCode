@@ -2,7 +2,13 @@
 
 int CountFrequency(char huruf, char* teks){
 	int jumlah;
-	// TODO
+	index;
+	strlen();
+
+	while(index<strlen(teks){
+		huruf==teks[index]
+		int jumlah++
+	}
 	return jumlah;
 }
 void GenerateCharQueue(Queue *queue){
