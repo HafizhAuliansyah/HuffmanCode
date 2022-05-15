@@ -11,10 +11,12 @@
 #include "BinaryTree.h"
 
 // SALMAN
-int CountFrequency(char huruf, char* teks);
+int CountFrequency(char huruf,const char* teks);
 void GenerateCharQueue(Queue *queue, char *teks);
-void SortQueueByFreq(Queue *queue);
+void openHelp();
+
 // HAFIZH
+void SortQueueByFreq(Queue *queue);
 void GenerateHuffmanTree(bTree *tree, Queue *queue);
 char* GenerateHuffmanCode(bTree *tree, char huruf);
 

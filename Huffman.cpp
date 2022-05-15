@@ -1,15 +1,19 @@
 #include "Huffman.h"
 
-int CountFrequency(char huruf, char* teks){
+int CountFrequency(char huruf,const char* teks){
 	int jumlah;
-	index;
-	strlen();
+	int index;
+	int panjang_teks = strlen(teks);
+	
+	while(index < panjang_teks){
+		if(huruf==teks[index])
+			jumlah++;
 
-	while(index<strlen(teks){
-		huruf==teks[index]
-		int jumlah++
+		index++;
 	}
+	
 	return jumlah;
+	
 }
 void GenerateCharQueue(Queue *queue, char *teks){
 	return;

@@ -25,6 +25,7 @@ int main() {
 					}
 				}while(teks.length() < 2);
 				const char* teks_c = teks.c_str();
+				
 				break;
 			}
 			case 2:
