@@ -11,7 +11,7 @@ int main() {
 		printf("1. Input Kata/Kalimat\n");
 		printf("2. Tampilkan Tree\n");
 		printf("3. Tampilkan Huffman Code\n");
-		printf("4. Panduan Penggunaan")
+		printf("4. Panduan Penggunaan");
 		printf("5. Keluar \n");
 		printf("Masukkan Pilihan : ");
 		fflush(stdin);
@@ -35,7 +35,9 @@ int main() {
 				break;
 			case 4:
 				openHelp();
-				break
+				break;
+			case 5:
+				break;
 			default:
 				break;
 			

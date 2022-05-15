@@ -1,7 +1,9 @@
+#include "Huffman.h"
+
 void openHelp(){
 	FILE *data;
 	char panduan[600];
-	
+	char jawab;
 	data = fopen("help.txt", "r");
 	
 	system("cls");
@@ -18,7 +20,7 @@ void openHelp(){
 	if(jawab == 'y'|jawab == 'Y') {
 	main() 
 	}
-	else {
-		
+	else(jawab == "n"|jawab == "N") {
+	return;	
 	}
 }
