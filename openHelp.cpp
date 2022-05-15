@@ -13,5 +13,12 @@ void openHelp(){
 	printf("\n\t");
 	fclose(data);
 	system("pause");
-	main();
+	printf("APAKAH ANDA SUDAH PAHAM? [Y/N]");
+	scanf("%s", &jawab);
+	if(jawab == 'y'|jawab == 'Y') {
+	main() 
+	}
+	else {
+		
+	}
 }
