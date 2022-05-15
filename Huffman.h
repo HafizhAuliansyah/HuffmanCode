@@ -12,7 +12,7 @@
 
 // SALMAN
 int CountFrequency(char huruf,const char* teks);
-void GenerateCharQueue(Queue *queue, char *teks);
+void GenerateCharQueue(Queue *queue,const char *teks);
 void openHelp();
 
 // HAFIZH

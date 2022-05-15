@@ -104,6 +104,6 @@ void PrintQueue(Queue Q){
 	      printf("(%c/%d) ", P->info->info.huruf, P->info->info.freq);
 	      P = Next(P);
 	    }
-	    printf("%c ", Info(P));
+	   printf("(%c/%d) ", P->info->info.huruf, P->info->info.freq);
 	}
 }
