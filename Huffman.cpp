@@ -16,7 +16,37 @@ int CountFrequency(char huruf,const char* teks){
 	
 }
 void GenerateCharQueue(Queue *queue, char *teks){
-	return;
+	char currentChar;
+	int index;
+	bool exist;
+	address_q temp;
+	
+	while(index < strlen(teks)){
+		currentChar=teks[index];
+		temp=queue->First;
+		while(temp!=NULL){
+			if(temp->info->info.huruf == currentChar){
+				exist=true;
+				break;
+			}
+		temp=temp->next;
+		}
+		if(exist==true){
+			continue;
+		}
+		else {
+			nAddress newNode;
+			infotype newData;
+			int freq;
+		
+			freq=CountFrequency(currentChar, teks);
+			newData.huruf=currentChar;
+			newData.freq=freq;
+			newNode=bCreateNode(newData);
+			Enqueue(queue, newNode);
+		}
+	}
+	
 }
 void SortQueueByFreq(Queue *queue){
 	return;

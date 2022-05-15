@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <conio.h>
 #include <string>
-
+#include <stdbool.h>
 #include "Queue.h"
 #include "BinaryTree.h"
 
