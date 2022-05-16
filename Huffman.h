@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include "Queue.h"
 #include "BinaryTree.h"
+#include "openHelp.h"
 
 // SALMAN
 int CountFrequency(char huruf,const char* teks);

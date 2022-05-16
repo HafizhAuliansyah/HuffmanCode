@@ -18,7 +18,7 @@ void openHelp(){
 	printf("APAKAH ANDA SUDAH PAHAM? [Y/N]");
 	scanf("%s", &jawab);
 	if(jawab == 'y'|jawab == 'Y') {
-	main() 
+	main();
 	}
 	else(jawab == "n"|jawab == "N") {
 	return;	
