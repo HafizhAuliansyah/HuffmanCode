@@ -3,9 +3,9 @@
 int CountFrequency(char huruf,const char* teks){
 	// DEKLARASI VARIABEL
 	// jumlah : penampung .....
-	int jumlah = 0;
-	int index = 0;
-	int panjang_teks = strlen(teks);
+	int jumlah = 0; //dimulai dari 0
+	int index = 0; //dimulai dari 0
+	int panjang_teks = strlen(teks); 
 	
 	// LOOPING .....
 	while(index < panjang_teks){
