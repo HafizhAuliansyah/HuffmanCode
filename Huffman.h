@@ -7,6 +7,7 @@
 #include <conio.h>
 #include <string>
 #include <stdbool.h>
+#include <windows.h>
 
 #include "Queue.h"
 #include "BinaryTree.h"
@@ -27,6 +28,18 @@ void GenerateCharQueue(Queue *queue,const char *teks);
 /* Open Help */
 // Membuka file help.txt dan menampilkan panduan pengguna
 void openHelp();
+
+/*Homepage*/
+//sebagai awalan sebelum masuk menu utama
+//sebagai menyimpan footer dan header juga
+int Homepage();
+int header_aplikasi();
+int footer_aplikasi();
+int Exitapp();		
+int WrongInp();
+int loading();
+
+
 
 // HAFIZH
 /* SortQueueByFreq */

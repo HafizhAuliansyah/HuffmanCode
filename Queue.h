@@ -10,7 +10,7 @@
 	#define LIST_CONSTANT 1
 	#define Nil NULL
 	#define Info(P) (P)->info
-	#define Next(P) (P)->next
+	#define NextQ(P) (P)->next
 	#define First(Q) (Q).First
 #endif
 
