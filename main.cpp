@@ -1,23 +1,36 @@
 #include "Queue.h"
 #include "Huffman.h"
 
-using namespace std;
+
 
 int main() {
 	int pilih;
 	string teks;
+	Queue queue;
+	bTree tree;
+	char str[] = "";
 	do{
 		system("cls");
+		cout << "TEKS : ";
+		if(teks.empty()){
+			cout << "\x1b[91m [ Kosong ] \x1b[m" << endl;
+		}else{
+			cout << "\x1b[92m" << teks << "\x1b[m" <<endl;
+		}
+			
+		printf("\n");
 		printf("1. Input Kata/Kalimat\n");
 		printf("2. Tampilkan Tree\n");
 		printf("3. Tampilkan Huffman Code\n");
-		printf("4. Panduan Penggunaan");
+		printf("4. Panduan Penggunaan\n");
 		printf("5. Keluar \n");
 		printf("Masukkan Pilihan : ");
 		fflush(stdin);
 		scanf("%d" ,&pilih);
 		switch(pilih){
 			case 1:{
+				CreateQueue(&queue);
+				bCreate(&tree);
 				do{
 					printf("Masukkan Kata/Kalimat : ");
 					getline(cin>>ws, teks);
@@ -26,23 +39,29 @@ int main() {
 					}
 				}while(teks.length() < 2);
 				const char* teks_c = teks.c_str();
-				
+				GenerateCharQueue(&queue, teks_c);
+				GenerateHuffmanTree(&tree, &queue);
+				if(tree.root == NULL)
+					cout << "\x1b[91m GAGAL MEMBUAT HUFFMAN TREE \x1b[m" << endl;
+				else
+					cout << "\x1b[92m BERHASIL MEMBUAT HUFFMAN TREE \x1b[m" << endl;
 				break;
 			}
 			case 2:
+				bPrint(tree.root, str);
 				break;
 			case 3:
+				PrintCode(tree, strdup(teks.c_str()));
 				break;
 			case 4:
 				openHelp();
-				break;
-			case 5:
 				break;
 			default:
 				break;
 			
 		}
+		printf("Tekan apa saja untuk lanjut ....");
 		getche();
-	}while(pilih != 4);
+	}while(pilih != 5);
 	return 0;
 }

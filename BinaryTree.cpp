@@ -129,7 +129,6 @@ void bPre(nAddress root) //PreOrder
 		bPre(root->left);
 		bPre(root->right);
 	}
-    return;
 }
 void bIn(nAddress root) //Inorder
 {
@@ -160,9 +159,9 @@ void bPrint(nAddress node, char tab[]){
 			printf("%s(%d)\n",tab,node->info.freq);
 		}else{
 			if(node->info.huruf == ' ')
-				printf("%s( %s/%d )",tab, "space", node->info.huruf);
+				printf("%s( %s/%d )\n",tab, "space", node->info.freq);
 			else
-				printf("%s( %c/%d )",tab, node->info.huruf, node->info.huruf);
+				printf("%s( %c/%d )\n",tab, node->info.huruf, node->info.freq);
 		}
 		bPrint(node->left,tempTab);
 		bPrint(node->right,tempTab);
