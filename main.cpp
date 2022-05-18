@@ -50,7 +50,10 @@ int main() {
 				break;
 			}
 			case 2:
-				bPrint(tree.root, str);
+				if(!teks.empty())
+					bPrint(tree.root, str);
+				else 
+					cout << "\x1b[92m   MASUKAN TEKS TERLEBIH DAHULU \x1b[m" << endl;
 				break;
 			case 3:
 				PrintCode(tree, strdup(teks.c_str()));
