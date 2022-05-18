@@ -116,7 +116,7 @@ int bDepth(nAddress root){
 void bPost(nAddress root) //Post order untuk memproses simpul anak sebelah kiri dilanjukan ke sebelah kanan
 {
 	if (root!=NULL){
-		bPost(root->left);
+		bPost(root->left); 
 		bPost(root->right);
 		printf("%d ", root->info);
 		
