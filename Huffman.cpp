@@ -1,50 +1,66 @@
-#include "Huffman.h"
+#include "huffman.h"
 
 int CountFrequency(char huruf,const char* teks){
 	// DEKLARASI VARIABEL
-	// jumlah : penampung .....
+	// jumlah  : sebagai penampung frekuensi kemunculan huruf
+	// index   : looping huruf dari 0
+	// huruf   : variable char yang akan dicari
+	// teks    : variable char asal dari huruf
 	int jumlah = 0; //dimulai dari 0
 	int index = 0; //dimulai dari 0
-	int panjang_teks = strlen(teks); 
-	
-	// LOOPING .....
-	while(index < panjang_teks){
-		if(huruf==teks[index])
-			jumlah++;
+	int panjang_teks = strlen(teks); // fungsi string length dimasukkan ke dalam variabel panjang_teks  
 
-		index++;
+	
+	// PERULANGAN SELAMA PANJANG_TEKS JUMLAHNYA LEBIH BESAR DIBANDING JUMLAH YANG ADA PADA INDEX
+	while(index < panjang_teks){
+		if(huruf==teks[index]) //jumlah huruf sama dengan teks  
+			jumlah++; //jumlah ditambah = 1
+
+		index++; //index ditambah = 1
 	}
 	
 	return jumlah;
 	
 }
 void GenerateCharQueue(Queue *queue,const char *teks){
+	// DEKLARASI VARIABEL
+	// currentChar : penampung sementara karakter yang akan dibandingkan dan dicari frequensinya
+	// exist : penanda yang sudah ada dalam queue
+	// index : acuan pengulangan karakter
+	// boolean exist : penanda antara ada atau tidak dlm queue
+	// temp : variable penampung sementara dalam pengecekan ke dalam queue
+	
 	char currentChar;
 	int index;
 	bool exist;
 	address_q temp;
 	
+	// PERULANGAN SELAMA JUMLAH INDEX KURANG DIBANDINGKAN strlen YANG BERISI TEKS
 	while(index < strlen(teks)){
-		exist = false;
-		currentChar=teks[index];
-		temp=queue->First;
-		while(temp!=NULL){
-			if(temp->info->info.huruf == currentChar){
-				exist=true;
+		exist = false; 
+		currentChar=teks[index]; // jika salah maka lanjut memasukkan teks ke penampung
+		temp=queue->First; //node First dimasukkan ke dalam temp
+		while(temp!=NULL){ //PERULANGAN SELAMA PENAMPUNG KOSONG
+			if(temp->info->info.huruf == currentChar){ // Current char dibandingkan dengan penampung yang diisikan dengan info yang dimasukkan lagi huruf
+				exist=true; //maka sudah benar penandanya
 				break;
 			}
-		temp=temp->next;
+		temp=temp->next; // penampung diisikan node selanjutnya
 		}
-		if(exist==false){
-			nAddress newNode;
-			infotype newData;
-			int freq;
+		if(exist==false){ //ketika penanda salah
 		
-			freq=CountFrequency(currentChar, teks);
-			newData.huruf=currentChar;
-			newData.freq=freq;
-			newNode=bCreateNode(newData);
-			Enqueue(queue, newNode);
+		// newNode penyimpan sementara node
+		// newData sebagai penyimpanan sementara karakter dan frekuensi
+			nAddress newNode; // nAddress dimasukkan ke dalam newNode
+			infotype newData; // infotype dimasukkan ke dalam newData
+			
+			int freq; //penyimpan frequensi huruf
+		
+			freq=CountFrequency(currentChar, teks); //itungan frekuensi dari currentchar dan teks dimasukkan kedalam freq
+			newData.huruf=currentChar; //currentchar dimasukkan kedalam huruf yang ada dalam newData
+			newData.freq=freq; //freq dimasukkan ke dalam newData
+			newNode=bCreateNode(newData); //penyimpanan sementara dimasukkan ke dalam node smentara
+			Enqueue(queue, newNode); //Penginputan
 		}
 		index++;
 	}
@@ -212,7 +228,10 @@ void PrintCode(bTree hTree, char* teks){
 		if(!isShowed){
 			isExist = GenerateHuffmanCode(hTree.root, c, &codes, NULL);
 			if(isExist){
-				cout << c << " -> " << codes << endl;
+				if(c == ' ')
+					cout << "space" << "\t->" << codes << endl;
+				else
+					cout << c << "\t->" << codes << endl;
 				// Code yang ditampilkan masuk ke string showed
 				showed.append(&c);
 			}else{

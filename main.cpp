@@ -9,24 +9,23 @@ int main() {
 	Queue queue;
 	bTree tree;
 	char str[] = "";
+	Homepage();
 	do{
 		system("cls");
-		cout << "TEKS : ";
+		header_aplikasi();
+		cout << "     TEKS : ";
 		if(teks.empty()){
 			cout << "\x1b[91m [ Kosong ] \x1b[m" << endl;
 		}else{
 			cout << "\x1b[92m" << teks << "\x1b[m" <<endl;
-		}
-		printf("______________________________________________________________________________________\n");
-		printf("|                              HUFFMAN CODE APPLICATION                               |\n");
-		printf("|_____________________________________________________________________________________|\n");	
+		}	
 		printf("| 1. Input Kata/Kalimat                                                               |\n");
 		printf("| 2. Tampilkan Tree                                                                   |\n");
 		printf("| 3. Tampilkan Huffman Code                                                           |\n"); 
 		printf("| 4. Panduan Penggunaan                                                               |\n");
 		printf("| 5. Keluar                                                                           |\n");
-		printf("|_____________________________________________________________________________________|\n");
-		printf("  Masukkan Pilihan :");
+		footer_aplikasi();
+		printf("  Masukkan Pilihan : ");
 		fflush(stdin);
 		scanf("%d" ,&pilih);
 		switch(pilih){
@@ -50,13 +49,22 @@ int main() {
 				break;
 			}
 			case 2:
+				system("cls");
+				header_aplikasi();
 				if(!teks.empty())
 					bPrint(tree.root, str);
 				else 
-					cout << "\x1b[92m   MASUKAN TEKS TERLEBIH DAHULU \x1b[m" << endl;
+					cout << "\x1b[91m   MASUKAN TEKS TERLEBIH DAHULU \x1b[m" << endl;
+				footer_aplikasi();
 				break;
 			case 3:
-				PrintCode(tree, strdup(teks.c_str()));
+				system("cls");
+				header_aplikasi();
+				if(!teks.empty())
+					PrintCode(tree, strdup(teks.c_str()));
+				else
+					cout << "\x1b[91m   MASUKAN TEKS TERLEBIH DAHULU \x1b[m" << endl;
+				footer_aplikasi();
 				break;
 			case 4:
 				openHelp();
@@ -65,7 +73,7 @@ int main() {
 				break;
 			
 		}
-		printf("Tekan apa saja untuk lanjut ....");
+		printf("  Tekan apa saja untuk lanjut ....");
 		getche();
 	}while(pilih != 5);
 	return 0;

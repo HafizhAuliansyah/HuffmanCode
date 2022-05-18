@@ -21,7 +21,7 @@ address_q AlokasiQ (infoQ X){
 	P = (address_q) malloc (sizeof(ElmtQueue));
 	if(P != Nil){
 		Info(P) = X;
-	    Next(P) = Nil;
+	    NextQ(P) = Nil;
 	    return P;
 	}else{
 		return Nil;
@@ -39,12 +39,12 @@ void Enqueue(Queue *Q, infoQ x){
 		address_q Last = First(*Q);
 		if(Last == Nil){
 			First(*Q) = P;
-			Next(P) = Nil;
+			NextQ(P) = Nil;
 		}else{
-			while(Next(Last) != Nil){
-				Last = Next(Last);
+			while(NextQ(Last) != Nil){
+				Last = NextQ(Last);
 			}
-			Next(Last) = P;
+			NextQ(Last) = P;
 		}
 	}
 }
@@ -53,9 +53,9 @@ void DeleteQueue(Queue *Q, infoQ *x){
 	address_q P;
 	
 	P = First(*Q);
-	First(*Q) = Next(First(*Q));
+	First(*Q) = NextQ(First(*Q));
 	(*x) = Info(P);
-	Next(P) = Nil;
+	NextQ(P) = Nil;
 	// DeAlokasi(P);
 }
 
@@ -66,8 +66,8 @@ void UpdateHead(Queue Q, address_q *head){
 void UpdateTail(Queue Q, address_q *tail){
 	address_q P = First(Q);
 	if(P != Nil){
-		while(Next(P) != Nil){
-			P = Next(P);
+		while(NextQ(P) != Nil){
+			P = NextQ(P);
 		}
 	}
 	
@@ -100,9 +100,9 @@ void PrintQueue(Queue Q){
 	if(P == Nil){
 	    printf("Queue Kosong\n");
 	}else{
-	    while(Next(P) != Nil){
+	    while(NextQ(P) != Nil){
 	      printf("(%c/%d) ", P->info->info.huruf, P->info->info.freq);
-	      P = Next(P);
+	      P = NextQ(P);
 	    }
 	   printf("(%c/%d) ", P->info->info.huruf, P->info->info.freq);
 	}
