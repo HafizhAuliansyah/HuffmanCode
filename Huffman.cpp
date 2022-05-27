@@ -51,11 +51,11 @@ void GenerateCharQueue(Queue *queue,const char *teks){
 		while(temp!=NULL){ //PERULANGAN SELAMA PENAMPUNG KOSONG
 			if(temp->info->info.huruf == currentChar){ // Current char dibandingkan dengan penampung yang diisikan dengan info yang dimasukkan lagi huruf
 				exist=true; //maka sudah benar penandanya
-				break;
+				break; //keluar
 			}
 		temp=temp->next; // penampung diisikan node selanjutnya
 		}
-		if(exist==false){ //ketika penanda salah
+		if(exist==false){ //ketika karakter belum terdapat di queue
 		
 		// newNode penyimpan sementara node
 		// newData sebagai penyimpanan sementara karakter dan frekuensi
