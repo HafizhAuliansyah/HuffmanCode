@@ -1,6 +1,10 @@
 #ifndef huffman_h
 #define huffman_h
 
+/* File			: Huffman.h */
+/* Deksripsi	: ADT Huffman, pendefinisian modul modul yang diperlukan dalam pembuatan huffman code */
+/* Dibuat Oleh	: Muhammad Hafizh Auliansyah & Salman Alfarisi*/
+/* Tanggal		: 12-05-2022, diedit 19-05-2022 */
 
 #include <iostream>
 #include <cstdlib>

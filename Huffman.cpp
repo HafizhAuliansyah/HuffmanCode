@@ -1,16 +1,22 @@
 #include "huffman.h"
 
+/* File			: Huffman.cpp */
+/* Deksripsi	: ADT Huffman, implementasi modul modul yang diperlukan dalam pembuatan huffman code */
+/* Dibuat Oleh	: Muhammad Hafizh Auliansyah & Salman Alfarisi*/
+/* Tanggal		: 12-05-2022, diedit 19-05-2022 */
+
+// START SALMAN
 int CountFrequency(char huruf,const char* teks){
 	// DEKLARASI VARIABEL
 	// jumlah  : sebagai penampung frekuensi kemunculan huruf
 	// index   : looping huruf dari 0
 	// huruf   : variable char yang akan dicari
 	// teks    : variable char asal dari huruf
+	
 	int jumlah = 0; //dimulai dari 0
 	int index = 0; //dimulai dari 0
 	int panjang_teks = strlen(teks); // fungsi string length dimasukkan ke dalam variabel panjang_teks  
 
-	
 	// PERULANGAN SELAMA PANJANG_TEKS JUMLAHNYA LEBIH BESAR DIBANDING JUMLAH YANG ADA PADA INDEX
 	while(index < panjang_teks){
 		if(huruf==teks[index]) //jumlah huruf sama dengan teks  
@@ -34,6 +40,8 @@ void GenerateCharQueue(Queue *queue,const char *teks){
 	int index;
 	bool exist;
 	address_q temp;
+	if(strlen(teks) < 2)
+		return;
 	
 	// PERULANGAN SELAMA JUMLAH INDEX KURANG DIBANDINGKAN strlen YANG BERISI TEKS
 	while(index < strlen(teks)){
@@ -81,15 +89,13 @@ void openHelp(){
 	printf("\n\t");
 	fclose(data);
 	system("pause");
-	printf("APAKAH ANDA SUDAH PAHAM? [Y/N]");
-	scanf("%s", &jawab);
-	if(jawab == 'y'|jawab == 'Y') {
-		return; 
-	}
-	else if(jawab == 'n'|jawab == 'N') {
-		return;	
-	}
+	do{
+		printf("APAKAH ANDA SUDAH PAHAM? [Y/N] : ");
+		scanf("%s", &jawab);
+	}while(jawab != 'y' && jawab != 'Y');
 }
+
+// START HAFIZH
 void SortQueueByFreq(Queue *queue){
 	// INSERTION SORT
 	
@@ -124,6 +130,8 @@ void SortQueueByFreq(Queue *queue){
 	
 }
 void GenerateHuffmanTree(bTree *tree, Queue *queue){
+	if(isQueueEmpty(*queue) || LengthQueue(*queue) < 2)
+	 return;
 	// Queue di sorting terlebih dahulu
 	SortQueueByFreq(queue);
 	if(!isQueueEmpty(*queue)){

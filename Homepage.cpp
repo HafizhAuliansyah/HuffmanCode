@@ -1,5 +1,9 @@
 #include "huffman.h"
 
+/* File			: Homepage.cpp */
+/* Deksripsi	: Fitur tambahan tampilan */
+/* Dibuat Oleh	: Salman Alfarisi */
+/* Tanggal		: 17-05-2022 */
 
 // deklarasi modul function
 int Exitapp();		// keluar app
